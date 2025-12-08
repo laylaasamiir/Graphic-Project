@@ -122,7 +122,7 @@ class SimpleGLEventListener implements GLEventListener {
         gl.glVertex2i ( 200,150);
         gl.glEnd();
 
-        gl.glColor3f(0.0f, 0.0f, 1.0f);
+        gl.glColor3f(1.0f, 0.0f, 1.0f);
 
         gl.glBegin(GL.GL_POINTS);
         gl.glVertex2i ( 400,150);
