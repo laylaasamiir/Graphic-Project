@@ -5,38 +5,37 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class HomePage extends JPanel {
-    private JButton singlePlayerButton  ;
-    private JButton multiPlayerButton ;
-    private JButton howToPlayButton ;
-    private JButton exitButton ;
+    private JButton singlePlayerButton;
+    private JButton multiPlayerButton;
+    private JButton howToPlayButton;
+    private JButton exitButton;
     private JButton signInButton;
-    private String PlayerName="";
+    private String PlayerName = "";
     private Image BackGround;
     public HomePage() {
-        BackGround = new ImageIcon("src/Images/BackGround.png").getImage();
+        BackGround = new ImageIcon("src/Images/The BackGround Image.png").getImage();
         setLayout(null);
 
-        singlePlayerButton=createButton("singlePlayerButton");
-        singlePlayerButton.setLocation(300,150);
+        singlePlayerButton=createButton("Single Player");
+        singlePlayerButton.setBounds(275,300,150,45);
 
-        multiPlayerButton=createButton("multiPlayer");
-        multiPlayerButton.setLocation(300,250);
+        multiPlayerButton=createButton("Multi Player");
+        multiPlayerButton.setBounds(275,350,150,45);
 
-        howToPlayButton=createButton("howToPlay");
-        howToPlayButton.setLocation(300,300);
+        howToPlayButton=createButton("How To Play");
+        howToPlayButton.setBounds(275,400,150,45);
 
         exitButton=creatExitButton("Exit");
-        exitButton.setLocation(10,250);
+        exitButton.setBounds(30,10,65,30);
 
-        signInButton=createButton("signIn");
-        signInButton.setLocation(10,10);
+        signInButton=createButton("Sign In");
+        signInButton.setBounds(580,10,80,30);
 
         add(singlePlayerButton);
         add(multiPlayerButton);
         add(howToPlayButton);
-        add(signInButton);
         add(exitButton);
-
+        add(signInButton);
 
     }
     public void setButtonAction(ActionListener actionListener) {
@@ -53,7 +52,7 @@ public class HomePage extends JPanel {
         button.setOpaque(false);
         button.setContentAreaFilled(false);
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("Arial", Font.BOLD, 18));
+        button.setFont(new Font("Arial", Font.BOLD, 13));
         return button;
 
     }
@@ -63,7 +62,7 @@ public class HomePage extends JPanel {
         button.setOpaque(true);
         button.setBackground(Color.RED);
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("Arial", Font.BOLD, 14));
+        button.setFont(new Font("Arial", Font.BOLD, 15));
         return button;
     }
     protected  void paintComponent(Graphics g) {
@@ -72,27 +71,27 @@ public class HomePage extends JPanel {
             g.drawImage(BackGround, 0, 0, this.getWidth(), this.getHeight(), this);
 
         }
-    if(!PlayerName.isEmpty()){
-        g.setFont(new Font("Arial", Font.BOLD, 18));
-        FontMetrics metrics = g.getFontMetrics();
-        int x = (getWidth() - metrics.stringWidth("Welcome, " + PlayerName + "!")) / 2;
-        int y = metrics.getAscent() + 10;
-        g.drawString("Welcome, " + PlayerName + "!", x, y);
-      }
+        if(!PlayerName.isEmpty()){
+            g.setFont(new Font("Arial", Font.BOLD, 18));
+            FontMetrics metrics = g.getFontMetrics();
+            int x = (getWidth() - metrics.stringWidth("Welcome, " + PlayerName + "!")) / 2;
+            int y = metrics.getAscent() + 10;
+            g.drawString("Welcome, " + PlayerName + "!", x, y);
+        }
     }
 
     public void showSignInDialog(){
         String name = JOptionPane.showInputDialog(this, "Enter your name:", "Sign In", JOptionPane.PLAIN_MESSAGE);
         if (name != null && !name.trim().isEmpty()) {
-            PlayerName = name.trim();
+            PlayerName = name.trim(); // Update the player's name
             JOptionPane.showMessageDialog(this, "Welcome, " + PlayerName + "!", "Sign In Successful", JOptionPane.INFORMATION_MESSAGE);
-            repaint();
+            repaint(); // Redraw the panel to show the updated name
         } else {
             JOptionPane.showMessageDialog(this, "You must enter a name to sign in.", "Sign In Failed", JOptionPane.WARNING_MESSAGE);
         }
     }
 
-    }
+}
 
 
 
