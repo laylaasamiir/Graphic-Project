@@ -31,6 +31,8 @@ public class TheGame extends JFrame {
             }
             else if("howToPlay".equals(command)){
                 cardLayout.show(contentPanel,"howToPlay");
+            } 
+
             }
 
 
