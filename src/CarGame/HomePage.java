@@ -73,6 +73,7 @@ public class HomePage extends JPanel {
         }
         if(!PlayerName.isEmpty()){
             g.setFont(new Font("Arial", Font.BOLD, 18));
+            g.setColor(Color.WHITE);
             FontMetrics metrics = g.getFontMetrics();
             int x = (getWidth() - metrics.stringWidth("Welcome, " + PlayerName + "!")) / 2;
             int y = metrics.getAscent() + 10;
