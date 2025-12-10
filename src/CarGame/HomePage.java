@@ -5,38 +5,37 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class HomePage extends JPanel {
-    private JButton singlePlayerButton  ;
-    private JButton multiPlayerButton ;
-    private JButton howToPlayButton ;
-    private JButton exitButton ;
+    private JButton singlePlayerButton;
+    private JButton multiPlayerButton;
+    private JButton howToPlayButton;
+    private JButton exitButton;
     private JButton signInButton;
-    private String PlayerName="";
+    private String PlayerName = "";
     private Image BackGround;
     public HomePage() {
-        BackGround = new ImageIcon("src/Images/BackGround.png").getImage();
+        BackGround = new ImageIcon("src/Images/The BackGround Image.png").getImage();
         setLayout(null);
 
-        singlePlayerButton=createButton("singlePlayerButton");
-        singlePlayerButton.setLocation(300,150);
+        singlePlayerButton=createButton("Single Player");
+        singlePlayerButton.setBounds(275,300,150,45);
 
-        multiPlayerButton=createButton("multiPlayerButton");
-        multiPlayerButton.setLocation(300,250);
+        multiPlayerButton=createButton("Multi Player");
+        multiPlayerButton.setBounds(275,350,150,45);
 
-        howToPlayButton=createButton("howToPlayButton");
-        howToPlayButton.setLocation(300,300);
+        howToPlayButton=createButton("How To Play");
+        howToPlayButton.setBounds(275,400,150,45);
 
         exitButton=creatExitButton("Exit");
-        exitButton.setLocation(10,250);
+        exitButton.setBounds(30,10,65,30);
 
-        signInButton=createButton("signInButton");
-        signInButton.setLocation(10,10);
+         signInButton=createButton("Sign In");
+        signInButton.setBounds(580,10,80,30);
 
         add(singlePlayerButton);
         add(multiPlayerButton);
         add(howToPlayButton);
-        add(signInButton);
         add(exitButton);
-
+        add(signInButton);
 
     }
     public void setButtonAction(ActionListener actionListener) {
@@ -53,7 +52,7 @@ public class HomePage extends JPanel {
         button.setOpaque(false);
         button.setContentAreaFilled(false);
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("Arial", Font.BOLD, 18));
+        button.setFont(new Font("Arial", Font.BOLD, 13));
         return button;
 
     }
@@ -63,7 +62,7 @@ public class HomePage extends JPanel {
         button.setOpaque(true);
         button.setBackground(Color.RED);
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("Arial", Font.BOLD, 14));
+        button.setFont(new Font("Arial", Font.BOLD, 15));
         return button;
     }
     protected  void paintComponent(Graphics g) {

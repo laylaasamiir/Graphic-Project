@@ -34,13 +34,13 @@ public class TheGame extends JFrame {
 //        باقي الpages
         layeredPane = new JLayeredPane();
         layeredPane.setLayout(null);
-        layeredPane.setPreferredSize(new Dimension(800,600));
+        layeredPane.setPreferredSize(new Dimension(700,500));
         layeredPane.add(contentPanel,JLayeredPane.DEFAULT_LAYER);
-        contentPanel.setBounds(0,0,800,600);
+        contentPanel.setBounds(0,0,700,500);
 
         setTitle("Car Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800,600);
+        setSize(700,500);
         setLocationRelativeTo(null);
         getContentPane().add(layeredPane);
         setVisible(true);
