@@ -14,7 +14,7 @@ public class HowToPlay extends JPanel {
 
 
     backButton =createButton("Back");
-    backButton.setLocation(300, 500);
+    backButton.setBounds(550,370,80,40);
     backButton.addActionListener(e-> cardLayout.show(contentPanel,"HomePage"));
     add(backButton);
     }
@@ -32,7 +32,7 @@ public class HowToPlay extends JPanel {
         button.setOpaque(false);
         button.setContentAreaFilled(false);
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("Arial", Font.BOLD, 18));
+        button.setFont(new Font("Arial", Font.BOLD, 16));
         return button;
 
     }

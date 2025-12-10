@@ -17,6 +17,7 @@ public class TheGame extends JFrame {
         contentPanel = new JPanel(cardLayout);
         HomePage homePage = new HomePage();
         HowToPlay howToPlay = new HowToPlay(cardLayout, contentPanel);
+        Levels levels = new Levels(this,cardLayout,contentPanel);
 //        باقي الpages
 
 
@@ -26,12 +27,21 @@ public class TheGame extends JFrame {
             if("Exit".equals(command)){
                dispose();
             }
-            else if("signIn".equals(command)){
+            else if("Sign In".equals(command)){
                 homePage.showSignInDialog();
             }
-            else if("howToPlay".equals(command)){
+            else if("How To Play".equals(command)){
                 cardLayout.show(contentPanel,"howToPlay");
             }
+            else if("Single Player".equals(command)){
+                gameMode = "Single Player";
+                cardLayout.show(contentPanel,"Levels");
+            }
+            else if("Multi Player".equals(command)){
+                gameMode = "Multi Player";
+                cardLayout.show(contentPanel,"Levels");
+            }
+
 
 
         });
@@ -40,6 +50,7 @@ public class TheGame extends JFrame {
 
         contentPanel.add(homePage, "HomePage"   );
         contentPanel.add(howToPlay, "howToPlay");
+        contentPanel.add(levels, "Levels");
 
 
 //        باقي الpages
