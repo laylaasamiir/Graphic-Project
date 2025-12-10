@@ -5,6 +5,7 @@
       <root url="file://$PROJECT_DIR$/../JOGLwin/lib64" />
       <root url="file://$PROJECT_DIR$/../JOGLwin/lib64" />
       <root url="file://$PROJECT_DIR$/../JOGLwin/lib64" />
+      <root url="file://$PROJECT_DIR$/../JOGLwin/lib64" />
     </CLASSES>
     <JAVADOC />
     <NATIVE>
@@ -13,6 +14,7 @@
     <SOURCES>
       <root url="file://$PROJECT_DIR$/src" />
     </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../JOGLwin/lib64" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../JOGLwin/lib64" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../JOGLwin/lib64" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../JOGLwin/lib64" recursive="false" />
