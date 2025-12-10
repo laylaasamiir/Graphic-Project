@@ -8,7 +8,7 @@ public class TheGame extends JFrame {
     private JPanel contentPanel;
     private JLayeredPane layeredPane;
     public String gameMode;
-//    main
+    //    main
     public static void main(String[] args) {
         SwingUtilities.invokeLater( () -> new TheGame());
     }
@@ -25,7 +25,7 @@ public class TheGame extends JFrame {
         homePage.setButtonAction(e ->{
             String command = e.getActionCommand();
             if("Exit".equals(command)){
-               dispose();
+                dispose();
             }
             else if("Sign In".equals(command)){
                 homePage.showSignInDialog();
