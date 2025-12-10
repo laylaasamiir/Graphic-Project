@@ -16,6 +16,7 @@ public class TheGame extends JFrame {
         cardLayout = new CardLayout();
         contentPanel = new JPanel(cardLayout);
         HomePage homePage = new HomePage();
+        HowToPlay howToPlay = new HowToPlay(cardLayout, contentPanel);
 //        باقي الpages
 
 
@@ -25,11 +26,21 @@ public class TheGame extends JFrame {
             if("Exit".equals(command)){
                dispose();
             }
+            else if("signIn".equals(command)){
+                homePage.showSignInDialog();
+            }
+            else if("howToPlay".equals(command)){
+                cardLayout.show(contentPanel,"howToPlay");
+            }
+
+
         });
 
 
 
         contentPanel.add(homePage, "HomePage"   );
+        contentPanel.add(howToPlay, "howToPlay");
+
 
 //        باقي الpages
         layeredPane = new JLayeredPane();

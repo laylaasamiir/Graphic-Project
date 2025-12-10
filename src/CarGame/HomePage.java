@@ -19,16 +19,16 @@ public class HomePage extends JPanel {
         singlePlayerButton=createButton("singlePlayerButton");
         singlePlayerButton.setLocation(300,150);
 
-        multiPlayerButton=createButton("multiPlayerButton");
+        multiPlayerButton=createButton("multiPlayer");
         multiPlayerButton.setLocation(300,250);
 
-        howToPlayButton=createButton("howToPlayButton");
+        howToPlayButton=createButton("howToPlay");
         howToPlayButton.setLocation(300,300);
 
         exitButton=creatExitButton("Exit");
         exitButton.setLocation(10,250);
 
-        signInButton=createButton("signInButton");
+        signInButton=createButton("signIn");
         signInButton.setLocation(10,10);
 
         add(singlePlayerButton);
@@ -84,9 +84,9 @@ public class HomePage extends JPanel {
     public void showSignInDialog(){
         String name = JOptionPane.showInputDialog(this, "Enter your name:", "Sign In", JOptionPane.PLAIN_MESSAGE);
         if (name != null && !name.trim().isEmpty()) {
-            PlayerName = name.trim(); // Update the player's name
+            PlayerName = name.trim();
             JOptionPane.showMessageDialog(this, "Welcome, " + PlayerName + "!", "Sign In Successful", JOptionPane.INFORMATION_MESSAGE);
-            repaint(); // Redraw the panel to show the updated name
+            repaint();
         } else {
             JOptionPane.showMessageDialog(this, "You must enter a name to sign in.", "Sign In Failed", JOptionPane.WARNING_MESSAGE);
         }
