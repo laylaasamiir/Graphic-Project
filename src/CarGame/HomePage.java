@@ -28,7 +28,7 @@ public class HomePage extends JPanel {
         exitButton=creatExitButton("Exit");
         exitButton.setBounds(30,10,65,30);
 
-         signInButton=createButton("Sign In");
+        signInButton=createButton("Sign In");
         signInButton.setBounds(580,10,80,30);
 
         add(singlePlayerButton);
@@ -71,13 +71,13 @@ public class HomePage extends JPanel {
             g.drawImage(BackGround, 0, 0, this.getWidth(), this.getHeight(), this);
 
         }
-    if(!PlayerName.isEmpty()){
-        g.setFont(new Font("Arial", Font.BOLD, 18));
-        FontMetrics metrics = g.getFontMetrics();
-        int x = (getWidth() - metrics.stringWidth("Welcome, " + PlayerName + "!")) / 2;
-        int y = metrics.getAscent() + 10;
-        g.drawString("Welcome, " + PlayerName + "!", x, y);
-      }
+        if(!PlayerName.isEmpty()){
+            g.setFont(new Font("Arial", Font.BOLD, 18));
+            FontMetrics metrics = g.getFontMetrics();
+            int x = (getWidth() - metrics.stringWidth("Welcome, " + PlayerName + "!")) / 2;
+            int y = metrics.getAscent() + 10;
+            g.drawString("Welcome, " + PlayerName + "!", x, y);
+        }
     }
 
     public void showSignInDialog(){
@@ -91,7 +91,7 @@ public class HomePage extends JPanel {
         }
     }
 
-    }
+}
 
 
 
