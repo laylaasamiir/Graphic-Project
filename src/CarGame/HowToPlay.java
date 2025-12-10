@@ -14,7 +14,7 @@ public class HowToPlay extends JPanel {
 
 
     backButton =createButton("Back");
-    backButton.setLocation(20, 500);
+    backButton.setLocation(300, 500);
     backButton.addActionListener(e-> cardLayout.show(contentPanel,"HomePage"));
     add(backButton);
     }
