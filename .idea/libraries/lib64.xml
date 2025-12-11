@@ -8,6 +8,7 @@
       <root url="file://$PROJECT_DIR$/../JOGLwin/lib64" />
       <root url="file://$PROJECT_DIR$/../Graphic/JOGLwin/lib64" />
       <root url="file://$PROJECT_DIR$/../javafx-sdk-21.0.2/lib" />
+      <root url="file://$PROJECT_DIR$/../Graphic/JOGLwin/lib64" />
     </CLASSES>
     <JAVADOC />
     <NATIVE>
@@ -40,6 +41,7 @@
       <root url="jar://$PROJECT_DIR$/../javafx-sdk-21.0.2/src.zip!/javafx.swing" />
       <root url="jar://$PROJECT_DIR$/../javafx-sdk-21.0.2/src.zip!/javafx.web" />
     </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../Graphic/JOGLwin/lib64" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../Graphic/JOGLwin/lib64" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../javafx-sdk-21.0.2/lib" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../JOGLwin/lib64" recursive="false" />

@@ -18,10 +18,10 @@ public class AnimGLSingleplayer1 extends AnimListener  {
     public AnimGLSingleplayer1() {}
 
     String[] textureNames = {
-            "singleRoad.png", "Rcar.png", "Bcar.png", "Gcar.png","Pcar.png",
+            "singleRoad.png", "Rcar.png", "Bcar.png","Pcar.png",
             "1.png","2.png","3.png","4.png","5.png","6.png","7.png",
             "8.png","9.png","10.png"
-            ,"SCORE.png","winner2.png","lose.png","live.png", "pause.png"
+            ,"SCORE.png","la-winner2.png","lose.png","live.png", "pause.png"
     };    TextureReader.Texture[] texture = new TextureReader.Texture[textureNames.length];
 
     public int[] textures = new int[textureNames.length];
@@ -95,13 +95,11 @@ public class AnimGLSingleplayer1 extends AnimListener  {
         }
 
         System.out.println("All textures loaded successfully.");
-         new JFXPanel();
-        bgMusic = new Sound("C:\\Users\\Mahmoud\\Desktop\\Graphic-Project\\src");
-        bgMusic.setVolume(0.9);
+
+        bgMusic = new Sound("S1.wav");
         bgMusic.loop();
 
-        crashSound = new Sound("crash.wav");
-        crashSound.setVolume(0.9);
+
 
 
     }
@@ -152,8 +150,6 @@ public class AnimGLSingleplayer1 extends AnimListener  {
                 if (checkCollision(playerX, playerY, enemy1X, enemy1Y) ||
                         checkCollision(playerX, playerY, enemy2X, enemy2Y)) {
 
-                    crashSound.play();
-
                     Lives--;
                     if (Lives > 0) {
                         resetEnemyPositions();
@@ -172,8 +168,6 @@ public class AnimGLSingleplayer1 extends AnimListener  {
         if (isGameOver) {
             disabled = true;
             isImageChanging = false;
-
-            bgMusic.stop();
 
             DrawSprite(gl,50,50,16,5);
             DrawSprite(gl, 60, 75, currentImageIndex, 1.5f);

@@ -16,7 +16,7 @@ class AnimGLMulti1 extends AnimListener {
         resetEnemy2();
     }
 
-    String[] textureNames = {"multyRoad.png", "Rcar.png",  "Bcar.png", "Pcar.png ", "player1.png","player2.png"};
+    String[] textureNames = {"multyRoad.png", "Rcar.png",  "Bcar.png", "Pcar.png" ,"car.png", "player1.png","player2.png"};
     TextureReader.Texture[] texture = new TextureReader.Texture[textureNames.length];
     public int[] textures = new int[textureNames.length];
 
@@ -39,7 +39,7 @@ class AnimGLMulti1 extends AnimListener {
     double player2Rotation = 0.0;
 
     float backgroundOffset = 0.0f;
-    float backgroundSpeed = 0.05f;
+    float backgroundSpeed = 0.04f;
 
     boolean wPressed = false, sPressed = false, aPressed = false, dPressed = false;
     boolean upPressed = false, downPressed = false, leftPressed = false, rightPressed = false;

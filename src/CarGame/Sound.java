@@ -1,59 +1,47 @@
 package CarGame;
 
-import javafx.embed.swing.JFXPanel;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+import javax.sound.sampled.*;
+import java.io.File;
 
 public class Sound {
 
+    private Clip clip;
 
-
-
-        private MediaPlayer player;
-
-        public Sound(String fileName) {
-
-            new JFXPanel();
-
-            try {
-                Media media = new Media(getClass().getResource("/Sounds/" + fileName).toExternalForm());
-                player = new MediaPlayer(media);
-            } catch (Exception e) {
-                System.out.println("Error loading sound: " + fileName);
-                e.printStackTrace();
-            }
+    public Sound(String fileName) {
+        try {
+            File file = new File("src/CarGame/" + fileName);
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+            clip = AudioSystem.getClip();
+            clip.open(audioStream);
+        } catch (Exception e) {
+            System.out.println("Error loading sound: " + fileName);
+            e.printStackTrace();
         }
+    }
 
-        public void play() {
-            if (player != null) {
-                player.stop();
-                player.play();
-            }
-        }
+    public void play() {
+        if (clip == null) return;
+        clip.stop();
+        clip.setFramePosition(0);
+        clip.start();
+    }
 
-        public void loop() {
-            if (player != null) {
-                player.setCycleCount(MediaPlayer.INDEFINITE);
-                player.play();
-            }
-        }
+    public void loop() {
+        if (clip == null) return;
+        clip.loop(Clip.LOOP_CONTINUOUSLY);
+    }
 
-        public void stop() {
-            if (player != null) {
-                player.stop();
-            }
-        }
+    public void stop() {
+        if (clip != null) clip.stop();
+    }
 
-        public void setVolume(double v) {
-            if (player != null) {
-                player.setVolume(v);
-            }
-        }
+    public void setVolume(float volume) {
+        if (clip == null) return;
 
-        public void pause() {
-            if (player != null) {
-                player.pause();
-            }
-        }
+        FloatControl gainControl =
+                (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 
+        float dB = (float) (Math.log(volume) / Math.log(10) * 20);
+        gainControl.setValue(dB);
+    }
 }
