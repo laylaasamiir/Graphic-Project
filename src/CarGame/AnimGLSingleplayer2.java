@@ -74,7 +74,7 @@ public class AnimGLSingleplayer2 extends AnimListener{
 
         for (int i = 0; i < textureNames.length; i++) {
             try {
-                texture[i] = TextureReader.readTexture("assets//" + textureNames[i], true);
+                texture[i] = TextureReader.readTexture("Images/" + textureNames[i], true);
                 gl.glBindTexture(GL.GL_TEXTURE_2D, textures[i]);
 
                 new GLU().gluBuild2DMipmaps(
