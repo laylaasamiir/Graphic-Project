@@ -16,7 +16,7 @@ public class AnimGLSingleplayer1 extends AnimListener  {
     public AnimGLSingleplayer1() {}
 
     String[] textureNames = {
-            "singleRoad.png", "Rcar.png", "Bcar.png", "Pcar.png",
+            "singleRoad.png", "Rcar.png", "Bcar.png", "Gcar.png","Vcar.png",
             "1.png","2.png","3.png","4.png","5.png","6.png","7.png",
             "8.png","9.png","10.png"
             ,"SCORE.png","winner2.png","lose.png","live.png", "pause.png"
@@ -111,7 +111,7 @@ public class AnimGLSingleplayer1 extends AnimListener  {
             return;
         }
         if(currentImageIndex==8){
-            backgroundSpeed=0.07f;
+            backgroundSpeed=0.04f;
             enemySpeed=0.7f;
         }
         if (!isGameOver && !isGameFinished) {
