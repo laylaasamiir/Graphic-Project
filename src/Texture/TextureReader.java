@@ -3,8 +3,9 @@ package Texture;
 
 import com.sun.opengl.util.BufferUtil;
 
-import javax.imageio.ImageIO;
+
 import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
 import java.awt.image.PixelGrabber;
 import java.io.IOException;
 import java.nio.ByteBuffer;

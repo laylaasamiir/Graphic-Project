@@ -9,8 +9,9 @@ import java.io.InputStream;
 
 public class BitmapLoader {
     public static BufferedImage loadBitmap(String file) throws IOException {
-        BufferedImage image;
+
         InputStream input = null;
+        BufferedImage image;
         try {
             input = ResourceRetriever.getResourceAsStream(file);
 
