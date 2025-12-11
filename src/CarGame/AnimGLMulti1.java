@@ -10,6 +10,7 @@ import javax.media.opengl.glu.GLU;
 
 class AnimGLMulti1 extends AnimListener {
 
+    Sound bgMusic;
 
     public AnimGLMulti1() {
         resetEnemy1();
@@ -125,6 +126,8 @@ class AnimGLMulti1 extends AnimListener {
                 e.printStackTrace();
             }
         }
+        bgMusic = new Sound("S1.wav");
+        bgMusic.loop();
     }
 
     @Override

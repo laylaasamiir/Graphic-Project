@@ -51,7 +51,7 @@ public class TheGame extends JFrame {
         contentPanel.add(levels, "Levels");
 
 
-//        باقي الpages
+//
         layeredPane = new JLayeredPane();
         layeredPane.setLayout(null);
         layeredPane.setPreferredSize(new Dimension(700,500));

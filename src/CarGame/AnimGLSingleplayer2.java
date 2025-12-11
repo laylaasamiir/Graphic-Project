@@ -12,15 +12,15 @@ import java.util.Random;
 
 public class AnimGLSingleplayer2 extends AnimListener{
 
-
+    Sound bgMusic;
 
     public AnimGLSingleplayer2() {}
 
     String[] textureNames = {
-            "oz.png", "Rcar.png", "Bcar.png", "Pcar.png",
+            "singleRoad.png", "Rcar.png", "Bcar.png", "Pcar.png",
             "1.png","2.png","3.png","4.png","5.png","6.png","7.png",
             "8.png","9.png","10.png"
-            ,"SCORE.png","winner2.png","lose.png","live.png", "pause.png"
+            ,"SCORE.png","la-winner2.png","lose.png","live.png", "pause.png"
     };    TextureReader.Texture[] texture = new TextureReader.Texture[textureNames.length];
 
     public int[] textures = new int[textureNames.length];
@@ -91,9 +91,11 @@ public class AnimGLSingleplayer2 extends AnimListener{
                 System.err.println("Error loading texture: " + textureNames[i]);
                 e.printStackTrace();
             }
+            bgMusic = new Sound("S1.wav");
+            bgMusic.loop();
         }
 
-        // تأكد من أن القوام قد تم تحميله بالكامل
+
         System.out.println("All textures loaded successfully.");
 
     }

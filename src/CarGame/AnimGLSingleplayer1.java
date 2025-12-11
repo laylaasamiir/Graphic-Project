@@ -14,7 +14,7 @@ import java.util.Random;
 public class AnimGLSingleplayer1 extends AnimListener  {
 
     Sound bgMusic;
-    Sound crashSound;
+
     public AnimGLSingleplayer1() {}
 
     String[] textureNames = {
