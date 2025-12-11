@@ -24,7 +24,7 @@ public class TextureReader {
         } else {
             bufferedImage = readImage(filename);
         }
-        return readPixels(bufferedImage, storeAlphaChannel);
+          return   readPixels(bufferedImage, storeAlphaChannel);
     }
 
     private static BufferedImage readImage(String resourceName) throws IOException {
