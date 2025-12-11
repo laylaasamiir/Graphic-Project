@@ -95,7 +95,7 @@ public class AnimGLSingleplayer1 extends AnimListener  {
 
         System.out.println("All textures loaded successfully.");
         // new JFXPanel();
-        bgMusic = new Sound("D:\\Graphic-Project\\src\\Images\\mixkit-sports-highlights-51.mp3");
+        bgMusic = new Sound("C:\\Users\\Mahmoud\\Desktop\\Graphic-Project\\src\\CarGame");
         bgMusic.setVolume(0.4);
         bgMusic.loop();  // موسيقى مستمرة
 
