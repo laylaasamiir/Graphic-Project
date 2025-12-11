@@ -16,7 +16,7 @@ class AnimGLMulti1 extends AnimListener {
         resetEnemy2();
     }
 
-    String[] textureNames = {"road1multi.png", "Rcar.png", "car.png", "Bcar.png", "Pcar.png ", "player1.png","player2.png"};
+    String[] textureNames = {"multyRoad.png", "Rcar.png",  "Bcar.png", "Pcar.png ", "player1.png","player2.png"};
     TextureReader.Texture[] texture = new TextureReader.Texture[textureNames.length];
     public int[] textures = new int[textureNames.length];
 

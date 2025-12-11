@@ -98,6 +98,9 @@ public class Levels  extends JPanel {
         if(canvas != null){
             contentPanel.remove(canvas);
         }
+        canvas = new GLCanvas();
+        canvas.setFocusable(true);
+
         AnimListener listener = null;
 
         switch (difficulty.toLowerCase()) {
@@ -115,8 +118,7 @@ public class Levels  extends JPanel {
 
         }
         canvas.addGLEventListener(listener);
-        canvas = new GLCanvas();
-        
+
         canvas.setFocusable(true);
         contentPanel.add(canvas ,"GameScreen");
         cardLayout.show(contentPanel,"GameScreen");
