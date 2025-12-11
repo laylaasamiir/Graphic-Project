@@ -63,9 +63,28 @@ public class Levels  extends JPanel {
             contentPanel.remove(canvas);
         }
         canvas = new GLCanvas();
-
-
         canvas.setFocusable(true);
+        AnimListener listener = null;
+
+        switch (difficulty.toLowerCase()) {
+            case "easy":
+                listener = new AnimGLSingleplayer1();
+                break;
+
+            case "medium":
+                canvas.addGLEventListener(new AnimGLSingleplayer2());
+                break;
+
+            case "hard":
+                canvas.addGLEventListener(new AnimGLSingleplayer3());
+                break;
+
+        }
+        canvas.addGLEventListener(listener);
+
+
+
+
         contentPanel.add(canvas ,"GameScreen");
         cardLayout.show(contentPanel,"GameScreen");
         canvas.requestFocusInWindow();

@@ -16,7 +16,7 @@ public class AnimGLSingleplayer1 extends AnimListener  {
     public AnimGLSingleplayer1() {}
 
     String[] textureNames = {
-            "vv.png", "Rcar.png", "Bcar.png", "Pcar.png",
+            "singleRoad.png", "Rcar.png", "Bcar.png", "Pcar.png",
             "1.png","2.png","3.png","4.png","5.png","6.png","7.png",
             "8.png","9.png","10.png"
             ,"SCORE.png","winner2.png","lose.png","live.png", "pause.png"
@@ -73,7 +73,7 @@ public class AnimGLSingleplayer1 extends AnimListener  {
 
         for (int i = 0; i < textureNames.length; i++) {
             try {
-                texture[i] = TextureReader.readTexture("assets//" + textureNames[i], true);
+                texture[i] = TextureReader.readTexture("Images/" + textureNames[i], true);
                 gl.glBindTexture(GL.GL_TEXTURE_2D, textures[i]);
 
                 new GLU().gluBuild2DMipmaps(
