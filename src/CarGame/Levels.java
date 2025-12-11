@@ -63,11 +63,31 @@ public class Levels  extends JPanel {
             contentPanel.remove(canvas);
         }
         canvas = new GLCanvas();
-
-
         canvas.setFocusable(true);
+        AnimListener listener = null;
+
+        switch (difficulty.toLowerCase()) {
+            case "easy":
+                listener = new AnimGLSingleplayer1();
+                break;
+
+            case "medium":
+                listener = new AnimGLSingleplayer2();
+                break;
+
+            case "hard":
+                listener = new AnimGLSingleplayer3();
+                break;
+
+        }
+        canvas.addGLEventListener(listener);
+
+
+
+
         contentPanel.add(canvas ,"GameScreen");
         cardLayout.show(contentPanel,"GameScreen");
+        canvas.addKeyListener(listener);
         canvas.requestFocusInWindow();
         if(timer ==null){
             timer = new Timer(16,event -> canvas.display());
@@ -78,11 +98,29 @@ public class Levels  extends JPanel {
         if(canvas != null){
             contentPanel.remove(canvas);
         }
+        AnimListener listener = null;
+
+        switch (difficulty.toLowerCase()) {
+            case "easy":
+                listener = new AnimGLMulti1();
+                break;
+
+            case "medium":
+                listener = new AnimGLMulti2();
+                break;
+
+            case "hard":
+                listener = new AnimGLMulti3();
+                break;
+
+        }
+        canvas.addGLEventListener(listener);
         canvas = new GLCanvas();
         
         canvas.setFocusable(true);
         contentPanel.add(canvas ,"GameScreen");
         cardLayout.show(contentPanel,"GameScreen");
+        canvas.addKeyListener(listener);
         canvas.requestFocusInWindow();
         if(timer ==null){
             timer = new Timer(16,event -> canvas.display());
