@@ -26,7 +26,7 @@ public class Sound {
 
         public void play() {
             if (player != null) {
-                player.stop();  // علشان يبدأ من الأول
+                player.stop();
                 player.play();
             }
         }

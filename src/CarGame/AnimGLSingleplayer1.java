@@ -1,6 +1,7 @@
 package CarGame;
 
 import Texture.TextureReader;
+import javafx.embed.swing.JFXPanel;
 
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
@@ -94,12 +95,12 @@ public class AnimGLSingleplayer1 extends AnimListener  {
         }
 
         System.out.println("All textures loaded successfully.");
-        // new JFXPanel();
-        bgMusic = new Sound("C:\\Users\\Mahmoud\\Desktop\\Graphic-Project\\src\\CarGame");
-        bgMusic.setVolume(0.4);
-        bgMusic.loop();  // موسيقى مستمرة
+         new JFXPanel();
+        bgMusic = new Sound("C:\\Users\\Mahmoud\\Desktop\\Graphic-Project\\src");
+        bgMusic.setVolume(0.9);
+        bgMusic.loop();
 
-        crashSound = new Sound("crash.mp3");
+        crashSound = new Sound("crash.wav");
         crashSound.setVolume(0.9);
 
 
