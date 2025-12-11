@@ -16,7 +16,7 @@ class AnimGLMulti1 extends AnimListener {
         resetEnemy2();
     }
 
-    String[] textureNames = {"road1multi.png", "Rcar.png", "Gcar.png", "Bcar.png", "Vcar.pbng ", "player1.png","player2.png"};
+    String[] textureNames = {"multyRoad.png", "Rcar.png",  "Bcar.png", "Pcar.png ", "player1.png","player2.png"};
     TextureReader.Texture[] texture = new TextureReader.Texture[textureNames.length];
     public int[] textures = new int[textureNames.length];
 
@@ -44,9 +44,9 @@ class AnimGLMulti1 extends AnimListener {
     boolean wPressed = false, sPressed = false, aPressed = false, dPressed = false;
     boolean upPressed = false, downPressed = false, leftPressed = false, rightPressed = false;
 
-
-    int winner = 0;
     double enemy1X, enemy1Y, enemy2X, enemy2Y;
+    int winner = 0;
+
     Random random = new Random();
 
     double carWidth = 5.0;

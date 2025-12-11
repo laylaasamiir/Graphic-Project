@@ -12,11 +12,12 @@ import java.util.Random;
 
 public class AnimGLSingleplayer1 extends AnimListener  {
 
-
+    Sound bgMusic;
+    Sound crashSound;
     public AnimGLSingleplayer1() {}
 
     String[] textureNames = {
-            "singleRoad.png", "Rcar.png", "Bcar.png", "Gcar.png","Vcar.png",
+            "singleRoad.png", "Rcar.png", "Bcar.png", "Gcar.png","Pcar.png",
             "1.png","2.png","3.png","4.png","5.png","6.png","7.png",
             "8.png","9.png","10.png"
             ,"SCORE.png","winner2.png","lose.png","live.png", "pause.png"
@@ -43,7 +44,7 @@ public class AnimGLSingleplayer1 extends AnimListener  {
     double enemy1X, enemy1Y, enemy2X, enemy2Y;
     float enemySpeed = 0.6f;
     float backgroundset = 0.0f;
-    float backgroundSpeed = 0.05f;
+    float backgroundSpeed = 0.02f;
     double carAngle = 0.0;
     private boolean disabled = false;
     double sideCollisionThreshold = 8.5;
@@ -94,6 +95,13 @@ public class AnimGLSingleplayer1 extends AnimListener  {
 
         System.out.println("All textures loaded successfully.");
         // new JFXPanel();
+        bgMusic = new Sound("D:\\Graphic-Project\\src\\Images\\mixkit-sports-highlights-51.mp3");
+        bgMusic.setVolume(0.4);
+        bgMusic.loop();  // موسيقى مستمرة
+
+        crashSound = new Sound("crash.mp3");
+        crashSound.setVolume(0.9);
+
 
     }
 
@@ -111,7 +119,7 @@ public class AnimGLSingleplayer1 extends AnimListener  {
             return;
         }
         if(currentImageIndex==8){
-            backgroundSpeed=0.04f;
+            backgroundSpeed=0.02f;
             enemySpeed=0.7f;
         }
         if (!isGameOver && !isGameFinished) {
@@ -142,6 +150,9 @@ public class AnimGLSingleplayer1 extends AnimListener  {
 
                 if (checkCollision(playerX, playerY, enemy1X, enemy1Y) ||
                         checkCollision(playerX, playerY, enemy2X, enemy2Y)) {
+
+                    crashSound.play();
+
                     Lives--;
                     if (Lives > 0) {
                         resetEnemyPositions();
@@ -160,6 +171,8 @@ public class AnimGLSingleplayer1 extends AnimListener  {
         if (isGameOver) {
             disabled = true;
             isImageChanging = false;
+
+            bgMusic.stop();
 
             DrawSprite(gl,50,50,16,5);
             DrawSprite(gl, 60, 75, currentImageIndex, 1.5f);
