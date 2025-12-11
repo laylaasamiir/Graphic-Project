@@ -26,7 +26,7 @@ public class ResourceRetriever {
         if (stream == null) {
             return new FileInputStream(filename);
         } else {
-            return stream;
+            return    stream ;
         }
     }
 }
