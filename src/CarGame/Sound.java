@@ -12,7 +12,7 @@ public class Sound {
         private MediaPlayer player;
 
         public Sound(String fileName) {
-           
+
             new JFXPanel();
 
             try {

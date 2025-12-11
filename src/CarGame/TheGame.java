@@ -1,3 +1,4 @@
+
 package CarGame;
 
 import javax.swing.*;
@@ -18,10 +19,7 @@ public class TheGame extends JFrame {
         HomePage homePage = new HomePage();
         HowToPlay howToPlay = new HowToPlay(cardLayout, contentPanel);
         Levels levels = new Levels(this,cardLayout,contentPanel);
-//        باقي الpages
 
-
-//
         homePage.setButtonAction(e ->{
             String command = e.getActionCommand();
             if("Exit".equals(command)){
