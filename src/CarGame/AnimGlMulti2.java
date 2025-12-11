@@ -10,8 +10,9 @@ class AnimGLMulti2 extends AnimListener {
 
 
     public AnimGLMulti2() {
-        resetEnemy1();
         resetEnemy2();
+        resetEnemy1();
+
     }
 
     String[] textureNames = {"road2multi.jpg", "Rcar.png", "car.png", "Bcar.png", "Pcar.png ", "player1.png","player2.png"};

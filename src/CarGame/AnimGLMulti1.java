@@ -44,9 +44,9 @@ class AnimGLMulti1 extends AnimListener {
     boolean wPressed = false, sPressed = false, aPressed = false, dPressed = false;
     boolean upPressed = false, downPressed = false, leftPressed = false, rightPressed = false;
 
-    double enemy1X, enemy1Y, enemy2X, enemy2Y;
-    int winner = 0;
 
+    int winner = 0;
+    double enemy1X, enemy1Y, enemy2X, enemy2Y;
     Random random = new Random();
 
     double carWidth = 5.0;

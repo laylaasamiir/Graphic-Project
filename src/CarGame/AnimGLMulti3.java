@@ -33,9 +33,9 @@ class AnimGLMulti3 extends AnimListener {
     double player2RoadRight = maxWidth * 0.84;
     double playerYMin = maxHeight * 0.165;
     double playerYMax = maxHeight * 0.9;
-
-    double player1Rotation = 0.0;
     double player2Rotation = 0.0;
+    double player1Rotation = 0.0;
+
 
     float backgroundOffset = 0.0f;
     float backgroundSpeed = 0.05f;
