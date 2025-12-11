@@ -287,7 +287,7 @@ class AnimGLMulti2 extends AnimListener {
             aPressed = false;
             player1Rotation = 0.0;
         } else if (e.getKeyCode() == KeyEvent.VK_D) {
-            dPressed = false;
+            dPressed =false;
             player1Rotation = 0.0;
         } else if (e.getKeyCode() == KeyEvent.VK_UP) {
             upPressed = false;
