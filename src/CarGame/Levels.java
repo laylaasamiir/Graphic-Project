@@ -60,9 +60,11 @@ public class Levels  extends JPanel {
     }
     private void startSinglePlayer(String difficulty){
         if(canvas != null){
-            contentPanel.removeAll();
+            contentPanel.remove(canvas);
         }
         canvas = new GLCanvas();
+
+
         canvas.setFocusable(true);
         contentPanel.add(canvas ,"GameScreen");
         cardLayout.show(contentPanel,"GameScreen");
@@ -74,9 +76,10 @@ public class Levels  extends JPanel {
     }
     private void startMultiPlayer(String difficulty){
         if(canvas != null){
-            contentPanel.removeAll();
+            contentPanel.remove(canvas);
         }
         canvas = new GLCanvas();
+        
         canvas.setFocusable(true);
         contentPanel.add(canvas ,"GameScreen");
         cardLayout.show(contentPanel,"GameScreen");
